@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>СпецТранс | Песок, щебень, вывоз снега | Чехов, Домодедовский р-н</title>
-    <!-- Font Awesome 6 (free) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -27,7 +27,6 @@
             padding: 0 24px;
         }
 
-        /* шапка */
         .header {
             background: #0b2b26;
             color: white;
@@ -84,7 +83,6 @@
             color: #0b2b26;
         }
 
-        /* hero */
         .hero {
             background: linear-gradient(135deg, #1e3c32 0%, #0a2a24 100%);
             color: white;
@@ -159,7 +157,6 @@
             font-size: 1.1rem;
         }
 
-        /* карточки материалов */
         .materials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -204,7 +201,6 @@
             color: #0b2b26;
         }
 
-        /* зимние услуги + картинки техники */
         .winter-services {
             background: linear-gradient(120deg, #eef2ff 0%, #e6f0fa 100%);
             border-radius: 48px;
@@ -276,12 +272,6 @@
             color: #1f2937;
         }
 
-        .truck-card small, .tractor-card small {
-            font-size: 0.7rem;
-            color: #6b7280;
-        }
-
-        /* преимущества */
         .features {
             background: #eef2f0;
         }
@@ -297,7 +287,6 @@
             margin-bottom: 15px;
         }
 
-        /* зона работы */
         .workzone {
             background: white;
             border-radius: 40px;
@@ -323,7 +312,6 @@
             gap: 10px;
         }
 
-        /* форма */
         .form-section {
             background: #f3f6f4;
         }
@@ -377,7 +365,6 @@
             transform: scale(0.98);
         }
 
-        /* контакты */
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -438,7 +425,6 @@
 </head>
 <body>
 
-<!-- ШАПКА: один телефон -->
 <header class="header">
     <div class="container">
         <div class="logo">
@@ -451,7 +437,6 @@
     </div>
 </header>
 
-<!-- ГЛАВНЫЙ ЭКРАН -->
 <section class="hero">
     <div class="container">
         <div class="region-badge">
@@ -463,110 +448,75 @@
     </div>
 </section>
 
-<!-- МАТЕРИАЛЫ (песок, щебень, гравий, земля, грунт) -->
+<!-- Материалы -->
 <section class="section">
     <div class="container">
         <h2 class="section-title">Сыпучие материалы</h2>
         <div class="section-sub">Качество, проверенное временем. Доставка от 1 тонны</div>
         <div class="materials-grid">
-            <div class="material-card">
-                <i class="fas fa-mound"></i>
-                <h3>Песок</h3>
-                <p>Карьерный, речной, сеяный. Для строительства и благоустройства.</p>
-                <div class="price-badge">от 750 ₽/т</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-rock"></i>
-                <h3>Щебень</h3>
-                <p>Гранитный, известняковый. Фракции 5-20, 20-40.</p>
-                <div class="price-badge">от 1250 ₽/т</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-cubes"></i>
-                <h3>Гравий</h3>
-                <p>Речной, декоративный. Для дренажа и отсыпки.</p>
-                <div class="price-badge">от 1100 ₽/т</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-seedling"></i>
-                <h3>Земля</h3>
-                <p>Плодородный грунт, чернозем, торфогрунт.</p>
-                <div class="price-badge">от 900 ₽/м³</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-globe-asia"></i>
-                <h3>Грунт</h3>
-                <p>Строительный грунт, суглинок, планировка участков.</p>
-                <div class="price-badge">от 800 ₽/м³</div>
-            </div>
+            <div class="material-card"><i class="fas fa-mound"></i><h3>Песок</h3><p>Карьерный, речной, сеяный.</p><div class="price-badge">от 750 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-rock"></i><h3>Щебень</h3><p>Гранитный, известняковый, фр. 5-20, 20-40.</p><div class="price-badge">от 1250 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-cubes"></i><h3>Гравий</h3><p>Речной, декоративный. Для дренажа.</p><div class="price-badge">от 1100 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-seedling"></i><h3>Земля</h3><p>Плодородный грунт, чернозем.</p><div class="price-badge">от 900 ₽/м³</div></div>
+            <div class="material-card"><i class="fas fa-globe-asia"></i><h3>Грунт</h3><p>Строительный грунт, суглинок.</p><div class="price-badge">от 800 ₽/м³</div></div>
         </div>
     </div>
 </section>
 
-<!-- ЗИМНИЕ УСЛУГИ + КАРТИНКИ КАМАЗА И ТРАКТОРА -->
+<!-- Зимние услуги + техника -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div class="winter-services">
             <div class="service-wrapper">
                 <div class="service-text">
                     <h3><i class="fas fa-snowplow"></i> Зимние услуги — уборка и вывоз снега</h3>
-                    <p>Оперативно очистим ваш участок, парковку, склад или подъездные пути. Работаем спецтехникой: <strong>самосвалы КАМАЗ</strong> для вывоза снега, <strong>мощные тракторы</strong> с щетками и отвалами. Вывоз снега на специализированные полигоны. Работаем в Чехове, Домодедовском и Чеховском районах без выходных.</p>
-                    <p>✅ Уборка после снегопада<br>✅ Погрузка и вывоз снега самосвалами<br>✅ Расчистка больших территорий тракторами<br>✅ Фиксированные цены, договор, отчетные документы</p>
+                    <p>Очистим участок, парковку, склад. КАМАЗы для вывоза, тракторы с щетками и отвалами. Работаем в Чехове, Домодедовском и Чеховском районах.</p>
                     <span class="service-badge"><i class="far fa-calendar-alt"></i> Сезон 2025 — принимаем заявки</span>
                 </div>
                 <div class="service-images">
-                    <div class="truck-card">
-                        <i class="fas fa-truck-moving"></i>
-                        <p>Самосвал КАМАЗ</p>
-                        <small>Вывоз снега до 20т</small>
-                    </div>
-                    <div class="tractor-card">
-                        <i class="fas fa-tractor"></i>
-                        <p>Трактор с отвалом</p>
-                        <small>Щетка / шнекоротор</small>
-                    </div>
+                    <div class="truck-card"><i class="fas fa-truck-moving"></i><p>Самосвал КАМАЗ</p><small>Вывоз снега до 20т</small></div>
+                    <div class="tractor-card"><i class="fas fa-tractor"></i><p>Трактор с отвалом</p><small>Щетка / шнекоротор</small></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ПРЕИМУЩЕСТВА -->
+<!-- Преимущества -->
 <section class="section features">
     <div class="container">
         <h2 class="section-title">Почему выбирают нас</h2>
         <div class="features-grid">
-            <div class="feature-item"><i class="fas fa-stopwatch"></i><h4>Оперативно</h4><p>В день заказа, быстрый выезд на объект.</p></div>
-            <div class="feature-item"><i class="fas fa-weight-hanging"></i><h4>Честный вес</h4><p>Контроль на весах, никакого обмана.</p></div>
-            <div class="feature-item"><i class="fas fa-hand-holding-usd"></i><h4>Цены ниже рынка</h4><p>Работаем без посредников.</p></div>
-            <div class="feature-item"><i class="fas fa-truck"></i><h4>Свой автопарк</h4><p>КАМАЗы, тракторы, спецтехника.</p></div>
+            <div class="feature-item"><i class="fas fa-stopwatch"></i><h4>Оперативно</h4><p>В день заказа</p></div>
+            <div class="feature-item"><i class="fas fa-weight-hanging"></i><h4>Честный вес</h4><p>Контроль на весах</p></div>
+            <div class="feature-item"><i class="fas fa-hand-holding-usd"></i><h4>Цены ниже рынка</h4><p>Без посредников</p></div>
+            <div class="feature-item"><i class="fas fa-truck"></i><h4>Свой автопарк</h4><p>КАМАЗы, тракторы</p></div>
         </div>
     </div>
 </section>
 
-<!-- ЗОНА РАБОТЫ (точное указание) -->
+<!-- Зона работы -->
 <section class="section">
     <div class="container">
         <div class="workzone">
-            <h3 style="font-size: 1.8rem; margin-bottom: 10px;"><i class="fas fa-map-pin"></i> География доставки и вывоза снега</h3>
-            <p style="margin-bottom: 20px;">Точно и быстро работаем в следующих локациях:</p>
+            <h3 style="font-size: 1.8rem;"><i class="fas fa-map-pin"></i> География доставки и вывоза снега</h3>
             <div class="zone-list">
                 <div class="zone-item"><i class="fas fa-city"></i> Город Чехов</div>
                 <div class="zone-item"><i class="fas fa-map-marked-alt"></i> Чеховский район</div>
                 <div class="zone-item"><i class="fas fa-map-marked-alt"></i> Домодедовский район</div>
             </div>
-            <p style="margin-top: 25px;"><i class="fas fa-check-circle" style="color:#2b7a4b;"></i> Вывоз снега и сыпучие материалы — доставляем в СНТ, коттеджные посёлки, промзоны, автопарковки.</p>
         </div>
     </div>
 </section>
 
-<!-- ФОРМА ЗАЯВКИ (универсальная) -->
+<!-- ФОРМА С РЕАЛЬНОЙ ОТПРАВКОЙ НА ПОЧТУ -->
 <section class="section form-section" id="orderForm">
     <div class="container">
         <h2 class="section-title">Оставить заявку</h2>
         <div class="section-sub">Рассчитаем стоимость песка, щебня или вывоза снега за 10 минут</div>
         <div class="callback-card">
-            <form action="#" method="POST" id="contactForm">
+            <form id="contactForm">
+                <!-- Поля формы -->
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Ваше имя *" required>
                 </div>
@@ -581,27 +531,27 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" id="details" placeholder="Объём (м³/т) или примерная площадь для снега">
+                    <input type="text" id="details" name="details" placeholder="Объём (м³/т) или примерная площадь для снега">
                 </div>
                 <div class="form-group">
-                    <textarea rows="3" id="message" placeholder="Укажите адрес (Чехов, Чеховский р-н, Домодедовский р-н) и пожелания"></textarea>
+                    <textarea rows="3" id="message" name="message" placeholder="Укажите адрес (Чехов, Чеховский р-н, Домодедовский р-н) и пожелания"></textarea>
                 </div>
                 <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
-                <p style="font-size: 0.75rem; margin-top: 18px; text-align: center;">Менеджер перезвонит в течение 15 минут</p>
+                <p style="font-size: 0.75rem; margin-top: 18px; text-align: center;">Заявка придёт на почту g15k114@mial.ru — менеджер свяжется с вами в течение 15 минут.</p>
             </form>
             <div id="formResult" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
         </div>
     </div>
 </section>
 
-<!-- КОНТАКТЫ (один телефон) -->
+<!-- Контакты -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div class="contact-info">
             <div class="contact-details">
                 <h3><i class="fas fa-address-card"></i> Контакты</h3>
                 <p><i class="fas fa-phone-alt"></i> <span><strong>8 (906) 781-48-55</strong> — заявки, диспетчер</span></p>
-                <p><i class="fas fa-envelope"></i> <span>specsneg@chehov.ru</span></p>
+                <p><i class="fas fa-envelope"></i> <span>g15k114@mial.ru</span></p>
                 <p><i class="fas fa-clock"></i> <span>Ежедневно: 07:30 – 21:00</span></p>
                 <p><i class="fas fa-map-pin"></i> <span>г. Чехов, ул. Индустриальная, 5</span></p>
                 <div style="margin-top: 20px;">
@@ -611,14 +561,12 @@
             <div class="map-placeholder">
                 <i class="fas fa-snowplow"></i>
                 <p>🚛 Зимняя и летняя спецтехника в наличии</p>
-                <p style="font-size: 0.85rem;"><i class="fas fa-location-dot"></i> Работаем: Чехов, Мелихово, Любучаны, Климовск, Барыбино, Шебанцево, Ям, Домодедово и весь район</p>
-                <p style="font-size: 0.7rem;">КАМАЗы для вывоза снега ➕ тракторы для уборки</p>
+                <p style="font-size: 0.85rem;"><i class="fas fa-location-dot"></i> Работаем: Чехов, Мелихово, Любучаны, Климовск, Барыбино, Домодедово</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ПОДВАЛ -->
 <footer class="footer">
     <div class="container">
         <p>© 2025 ООО «СпецТранс» — доставка песка, щебня, земли, грунта, вывоз снега в Чехове и Домодедовском районе.</p>
@@ -632,23 +580,51 @@
         const form = document.getElementById('contactForm');
         const resultDiv = document.getElementById('formResult');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
+
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             if (!name || !phone) {
                 resultDiv.innerHTML = '<span style="color:#b91c1c;">❌ Заполните имя и номер телефона</span>';
                 return;
             }
-            const service = document.getElementById('serviceType').value;
-            const details = document.getElementById('details').value;
-            const message = document.getElementById('message').value;
-            resultDiv.innerHTML = '<span style="color:#15803d;">✅ Спасибо, ' + name + '! Ваша заявка (' + service + ') принята. Диспетчер свяжется с вами по номеру ' + phone + '.</span>';
-            form.reset();
-            setTimeout(() => {
-                resultDiv.innerHTML = '';
-            }, 5000);
-            console.log({name, phone, service, details, message});
+
+            // Собираем данные для отправки через FormSubmit (ajax)
+            const formData = new FormData(form);
+            // Добавляем служебные поля для FormSubmit
+            formData.append('_subject', 'Новая заявка с сайта СпецТранс');
+            formData.append('_captcha', 'true');   // включить капчу (рекомендуется, чтобы избежать спама)
+            formData.append('_template', 'table');  // красивое отображение в письме
+
+            // Отключаем кнопку на время отправки
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/g15k114@mial.ru', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                if (data.success === 'true' || response.ok) {
+                    resultDiv.innerHTML = '<span style="color:#15803d;">✅ Спасибо, ' + name + '! Ваша заявка отправлена. Менеджер свяжется с вами по телефону ' + phone + ' в ближайшее время.</span>';
+                    form.reset();
+                } else {
+                    throw new Error('Ошибка при отправке');
+                }
+            } catch (error) {
+                resultDiv.innerHTML = '<span style="color:#b91c1c;">❌ Произошла ошибка при отправке. Пожалуйста, позвоните нам по телефону или попробуйте позже.</span>';
+                console.error(error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                setTimeout(() => {
+                    if (resultDiv.innerHTML) resultDiv.innerHTML = '';
+                }, 6000);
+            }
         });
     })();
 </script>
