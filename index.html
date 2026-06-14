@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>СпецТранс | Песок, щебень, вывоз снега | Чехов, Домодедовский р-н</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -27,11 +27,11 @@
             padding: 0 24px;
         }
 
-        /* ШАПКА - зеленая */
+        /* ШАПКА */
         .header {
             background: #0b2b26;
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -43,35 +43,35 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .logo h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
 
         .logo p {
-            font-size: 0.85rem;
+            font-size: 0.7rem;
             color: #cbd5e1;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
         .contacts-header a {
             background: rgba(0,0,0,0.2);
-            padding: 8px 20px;
+            padding: 8px 16px;
             border-radius: 40px;
             color: #fbbf24;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: 0.2s;
             display: inline-block;
+            white-space: nowrap;
         }
 
         .contacts-header a i {
-            margin-right: 8px;
+            margin-right: 6px;
             color: white;
         }
 
@@ -80,40 +80,39 @@
             color: #0b2b26;
             transform: translateY(-2px);
         }
-        .contacts-header a:hover i {
-            color: #0b2b26;
-        }
 
-        /* ГЕРОЙ - зеленый градиент */
+        /* ГЕРОЙ */
         .hero {
             background: linear-gradient(135deg, #1e3c32 0%, #0a2a24 100%);
             color: white;
-            padding: 70px 0;
+            padding: 50px 0;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 2.7rem;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             font-weight: 800;
+            line-height: 1.3;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1rem;
             max-width: 750px;
-            margin: 0 auto 30px;
+            margin: 0 auto 25px;
             opacity: 0.9;
+            padding: 0 10px;
         }
 
         .region-badge {
             background: #fbbf24;
             color: #1f2937;
             display: inline-block;
-            padding: 8px 25px;
+            padding: 6px 18px;
             border-radius: 60px;
             font-weight: bold;
-            margin-bottom: 25px;
-            font-size: 1rem;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
@@ -122,10 +121,10 @@
             background-color: #fbbf24;
             color: #1f2937;
             font-weight: bold;
-            padding: 14px 36px;
+            padding: 12px 28px;
             border-radius: 40px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: 0.25s;
             box-shadow: 0 5px 12px rgba(0,0,0,0.2);
         }
@@ -134,83 +133,78 @@
             margin-right: 8px;
         }
 
-        .btn:hover {
-            background-color: #f59e0b;
-            transform: translateY(-3px);
-        }
-
         .section {
-            padding: 70px 0;
+            padding: 50px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #0b2b26;
+            padding: 0 10px;
         }
 
         .section-sub {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 50px;
+            margin: 0 auto 35px;
             color: #4b5563;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            padding: 0 15px;
         }
 
+        /* СЕТКА КАРТОЧЕК - НА ТЕЛЕФОНЕ ПО 1 В РЯД */
         .materials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .material-card {
             background: white;
-            border-radius: 28px;
-            padding: 30px 20px;
+            border-radius: 24px;
+            padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             transition: 0.3s ease;
             border: 1px solid #eef2f0;
         }
 
-        .material-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
-        }
-
         .material-card i {
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: #cf9f2e;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .material-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
             color: #0b2b26;
         }
 
         .material-card p {
             color: #4b5563;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            padding: 0 5px;
         }
 
         .price-badge {
             display: inline-block;
             background: #f3f4f6;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 60px;
             font-weight: 600;
-            margin-top: 15px;
-            font-size: 0.85rem;
+            margin-top: 12px;
+            font-size: 0.8rem;
             color: #0b2b26;
         }
 
+        /* ЗИМНИЕ УСЛУГИ */
         .winter-services {
             background: linear-gradient(120deg, #eef2ff 0%, #e6f0fa 100%);
-            border-radius: 48px;
+            border-radius: 32px;
             margin-top: 20px;
             overflow: hidden;
         }
@@ -219,8 +213,8 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 30px;
-            padding: 40px;
+            gap: 25px;
+            padding: 30px 20px;
         }
 
         .service-text {
@@ -229,14 +223,14 @@
         }
 
         .service-text h3 {
-            font-size: 1.9rem;
+            font-size: 1.5rem;
             color: #0b2b26;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .service-text p {
-            font-size: 1rem;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
             color: #2c3e2f;
         }
 
@@ -244,81 +238,98 @@
             display: inline-block;
             background: #0b2b26;
             color: #fbbf24;
-            padding: 8px 20px;
+            padding: 6px 16px;
             border-radius: 60px;
             font-weight: bold;
-            margin-top: 10px;
+            font-size: 0.85rem;
         }
 
         .service-images {
             flex: 1.5;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .truck-card, .tractor-card {
             background: white;
-            border-radius: 36px;
-            padding: 20px 20px 15px;
+            border-radius: 28px;
+            padding: 15px 15px 12px;
             text-align: center;
-            width: 170px;
-            box-shadow: 0 12px 18px rgba(0,0,0,0.1);
-            transition: 0.2s;
+            width: 130px;
+            box-shadow: 0 10px 18px rgba(0,0,0,0.08);
         }
 
         .truck-card i, .tractor-card i {
-            font-size: 5rem;
+            font-size: 3.5rem;
             color: #2c5e4a;
         }
 
         .truck-card p, .tractor-card p {
             font-weight: bold;
-            margin-top: 12px;
-            color: #1f2937;
+            margin-top: 8px;
+            font-size: 0.85rem;
         }
 
+        .truck-card small, .tractor-card small {
+            font-size: 0.65rem;
+        }
+
+        /* ПРЕИМУЩЕСТВА */
         .features {
             background: #eef2f0;
         }
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
             text-align: center;
         }
         .feature-item i {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: #0b2b26;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .feature-item p {
+            font-size: 0.85rem;
         }
 
+        /* ЗОНА РАБОТЫ */
         .workzone {
             background: white;
-            border-radius: 40px;
-            padding: 40px;
+            border-radius: 32px;
+            padding: 30px 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.03);
             text-align: center;
+        }
+        .workzone h3 {
+            font-size: 1.4rem !important;
         }
         .zone-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 12px;
             margin-top: 20px;
         }
         .zone-item {
             background: #eef2f0;
-            padding: 10px 22px;
+            padding: 8px 18px;
             border-radius: 60px;
             font-weight: 600;
             color: #0b2b26;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            font-size: 0.85rem;
         }
 
+        /* ФОРМА */
         .form-section {
             background: #f3f6f4;
         }
@@ -326,81 +337,74 @@
             max-width: 700px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
-            border-radius: 36px;
+            padding: 30px 20px;
+            border-radius: 32px;
             box-shadow: 0 20px 35px rgba(0,0,0,0.05);
         }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .form-group input, 
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 14px 18px;
+            padding: 12px 16px;
             border: 1px solid #d1d5db;
             border-radius: 60px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-family: inherit;
-            transition: 0.2s;
         }
         .form-group textarea {
             border-radius: 24px;
             resize: vertical;
-        }
-        .form-group input:focus, 
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #fbbf24;
-            box-shadow: 0 0 0 3px rgba(251,191,36,0.2);
         }
         .btn-submit {
             background: #0b2b26;
             color: white;
             border: none;
             width: 100%;
-            padding: 14px;
-            font-size: 1.1rem;
+            padding: 12px;
+            font-size: 1rem;
             font-weight: bold;
             border-radius: 60px;
             cursor: pointer;
-            transition: 0.2s;
-        }
-        .btn-submit:hover {
-            background: #1e4a3e;
-            transform: scale(0.98);
         }
 
+        /* КОНТАКТЫ */
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 25px;
             justify-content: space-between;
             margin-top: 30px;
         }
         .contact-details {
             flex: 1;
             background: white;
-            padding: 30px;
-            border-radius: 32px;
+            padding: 25px;
+            border-radius: 28px;
+        }
+        .contact-details h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
         }
         .contact-details p {
-            margin: 16px 0;
+            margin: 12px 0;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1.05rem;
+            gap: 10px;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
         }
         .contact-details i {
-            width: 32px;
+            width: 28px;
             color: #cf9f2e;
         }
         .map-placeholder {
             flex: 1;
             background: #e2e8f0;
-            border-radius: 32px;
-            min-height: 280px;
+            border-radius: 28px;
+            min-height: 240px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -408,25 +412,151 @@
             color: #334155;
             flex-direction: column;
             gap: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .map-placeholder i {
+            font-size: 2.5rem;
+        }
+        .map-placeholder p {
+            font-size: 0.85rem;
         }
 
+        /* ПОДВАЛ */
         .footer {
             background: #0b2b26;
             color: #cbd5e6;
-            padding: 35px 0;
+            padding: 25px 0;
             text-align: center;
+        }
+        .footer p {
+            font-size: 0.75rem;
+            margin: 5px 0;
         }
         .footer a {
             color: #fbbf24;
             text-decoration: none;
         }
 
+        /* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
         @media (max-width: 768px) {
-            .hero h2 { font-size: 1.9rem; }
-            .section-title { font-size: 1.8rem; }
-            .service-wrapper { flex-direction: column; text-align: center; }
-            .service-images { justify-content: center; }
-            .header .container { flex-direction: column; text-align: center; }
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .material-card {
+                padding: 20px 12px;
+            }
+            
+            .material-card i {
+                font-size: 2.5rem;
+            }
+            
+            .material-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .service-wrapper {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 16px;
+            }
+            
+            .service-images {
+                justify-content: center;
+            }
+            
+            .truck-card, .tractor-card {
+                width: 110px;
+                padding: 12px 10px;
+            }
+            
+            .truck-card i, .tractor-card i {
+                font-size: 2.8rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .contacts-header a {
+                white-space: normal;
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+            
+            .logo h1 {
+                font-size: 1.3rem;
+            }
+            
+            .header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .zone-list {
+                gap: 10px;
+            }
+            
+            .zone-item {
+                font-size: 0.75rem;
+                padding: 6px 14px;
+            }
+            
+            .btn {
+                padding: 10px 24px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ТЕЛЕФОНОВ (до 400px) */
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .region-badge {
+                font-size: 0.75rem;
+                padding: 4px 14px;
+            }
+            
+            .truck-card, .tractor-card {
+                width: 100px;
+            }
         }
     </style>
 </head>
@@ -447,7 +577,7 @@
 <section class="hero">
     <div class="container">
         <div class="region-badge">
-            <i class="fas fa-map-marker-alt"></i> Работаем: г. Чехов, Чеховский район, Домодедовский район
+            <i class="fas fa-map-marker-alt"></i> г. Чехов, Чеховский р-н, Домодедовский р-н
         </div>
         <h2>Песок, щебень, земля, грунт<br>и вывоз снега с вашей территории</h2>
         <p>Собственный автопарк самосвалов и тракторов. Зимой — уборка снега, летом — стройматериалы. Работаем круглый год.</p>
@@ -455,41 +585,36 @@
     </div>
 </section>
 
-<!-- МАТЕРИАЛЫ: ИКОНКИ ПОДОБРАНЫ МАКСИМАЛЬНО ТОЧНО -->
+<!-- МАТЕРИАЛЫ -->
 <section class="section">
     <div class="container">
         <h2 class="section-title">Сыпучие материалы</h2>
         <div class="section-sub">Качество, проверенное временем</div>
         <div class="materials-grid">
-            <!-- Песок -->
             <div class="material-card">
                 <i class="fas fa-hourglass-half"></i>
                 <h3>Песок</h3>
                 <p>Карьерный, речной, сеяный. Для бетона, штукатурки, детских площадок.</p>
                 <div class="price-badge">от 750 ₽/т</div>
             </div>
-            <!-- Щебень -->
             <div class="material-card">
                 <i class="fas fa-cube"></i>
                 <h3>Щебень</h3>
                 <p>Гранитный, известняковый. Фракции 5-20, 20-40, 40-70.</p>
                 <div class="price-badge">от 1250 ₽/т</div>
             </div>
-            <!-- Гравий -->
             <div class="material-card">
                 <i class="fas fa-circle"></i>
                 <h3>Гравий</h3>
                 <p>Речной, морской, декоративный. Для дренажа и отсыпки.</p>
                 <div class="price-badge">от 1100 ₽/т</div>
             </div>
-            <!-- Земля -->
             <div class="material-card">
                 <i class="fas fa-leaf"></i>
                 <h3>Земля</h3>
                 <p>Плодородный грунт, чернозём, торфогрунт для газонов и теплиц.</p>
                 <div class="price-badge">от 900 ₽/м³</div>
             </div>
-            <!-- Грунт - НОВАЯ ИКОНКА (гора/насыпь) -->
             <div class="material-card">
                 <i class="fas fa-mountain"></i>
                 <h3>Грунт</h3>
@@ -536,7 +661,7 @@
 <section class="section">
     <div class="container">
         <div class="workzone">
-            <h3 style="font-size: 1.8rem;"><i class="fas fa-map-pin"></i> География доставки и вывоза снега</h3>
+            <h3><i class="fas fa-map-pin"></i> География доставки и вывоза снега</h3>
             <div class="zone-list">
                 <div class="zone-item"><i class="fas fa-city"></i> Город Чехов</div>
                 <div class="zone-item"><i class="fas fa-map-marked-alt"></i> Чеховский район</div>
@@ -573,9 +698,9 @@
                     <textarea rows="3" id="message" name="message" placeholder="Укажите адрес (Чехов, Чеховский р-н, Домодедовский р-н) и пожелания"></textarea>
                 </div>
                 <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
-                <p style="font-size: 0.75rem; margin-top: 18px; text-align: center;">Заявка придёт на почту g15k114@mail.ru — менеджер свяжется с вами в течение 15 минут.</p>
+                <p style="font-size: 0.7rem; margin-top: 15px; text-align: center;">Заявка придёт на почту g15k114@mail.ru — менеджер свяжется с вами в течение 15 минут.</p>
             </form>
-            <div id="formResult" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+            <div id="formResult" style="margin-top: 15px; text-align: center; font-weight: 500; font-size: 0.85rem;"></div>
         </div>
     </div>
 </section>
@@ -591,13 +716,13 @@
                 <p><i class="fas fa-clock"></i> <span>Ежедневно: 07:30 – 21:00</span></p>
                 <p><i class="fas fa-map-pin"></i> <span>г. Чехов, ул. Индустриальная, 5</span></p>
                 <div style="margin-top: 20px;">
-                    <a href="tel:+79067814855" class="btn" style="background: #0b2b26; color: #fbbf24; padding: 10px 28px;"><i class="fas fa-phone"></i> Позвонить</a>
+                    <a href="tel:+79067814855" class="btn" style="background: #0b2b26; color: #fbbf24; padding: 8px 20px; font-size: 0.9rem;"><i class="fas fa-phone"></i> Позвонить</a>
                 </div>
             </div>
             <div class="map-placeholder">
                 <i class="fas fa-snowplow"></i>
                 <p>🚛 Зимняя и летняя спецтехника в наличии</p>
-                <p style="font-size: 0.85rem;"><i class="fas fa-location-dot"></i> Работаем: Чехов, Мелихово, Любучаны, Климовск, Барыбино, Домодедово</p>
+                <p><i class="fas fa-location-dot"></i> Чехов, Мелихово, Любучаны, Климовск, Барыбино, Домодедово</p>
             </div>
         </div>
     </div>
