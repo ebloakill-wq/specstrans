@@ -27,6 +27,7 @@
             padding: 0 24px;
         }
 
+        /* ШАПКА - зеленая как было */
         .header {
             background: #0b2b26;
             color: white;
@@ -83,6 +84,7 @@
             color: #0b2b26;
         }
 
+        /* ГЕРОЙ - обычный зеленый градиент как было */
         .hero {
             background: linear-gradient(135deg, #1e3c32 0%, #0a2a24 100%);
             color: white;
@@ -188,6 +190,11 @@
             font-size: 1.8rem;
             margin-bottom: 12px;
             color: #0b2b26;
+        }
+
+        .material-card p {
+            color: #4b5563;
+            font-size: 0.95rem;
         }
 
         .price-badge {
@@ -448,22 +455,47 @@
     </div>
 </section>
 
-<!-- Материалы -->
+<!-- МАТЕРИАЛЫ -->
 <section class="section">
     <div class="container">
         <h2 class="section-title">Сыпучие материалы</h2>
-        <div class="section-sub">Качество, проверенное временем. Доставка от 1 тонны</div>
+        <div class="section-sub">Качество, проверенное временем</div>
         <div class="materials-grid">
-            <div class="material-card"><i class="fas fa-mound"></i><h3>Песок</h3><p>Карьерный, речной, сеяный.</p><div class="price-badge">от 750 ₽/т</div></div>
-            <div class="material-card"><i class="fas fa-rock"></i><h3>Щебень</h3><p>Гранитный, известняковый, фр. 5-20, 20-40.</p><div class="price-badge">от 1250 ₽/т</div></div>
-            <div class="material-card"><i class="fas fa-cubes"></i><h3>Гравий</h3><p>Речной, декоративный. Для дренажа.</p><div class="price-badge">от 1100 ₽/т</div></div>
-            <div class="material-card"><i class="fas fa-seedling"></i><h3>Земля</h3><p>Плодородный грунт, чернозем.</p><div class="price-badge">от 900 ₽/м³</div></div>
-            <div class="material-card"><i class="fas fa-globe-asia"></i><h3>Грунт</h3><p>Строительный грунт, суглинок.</p><div class="price-badge">от 800 ₽/м³</div></div>
+            <div class="material-card">
+                <i class="fas fa-hourglass-half"></i>
+                <h3>Песок</h3>
+                <p>Карьерный, речной, сеяный. Для бетона, штукатурки, детских площадок.</p>
+                <div class="price-badge">от 750 ₽/т</div>
+            </div>
+            <div class="material-card">
+                <i class="fas fa-cube"></i>
+                <h3>Щебень</h3>
+                <p>Гранитный, известняковый. Фракции 5-20, 20-40, 40-70.</p>
+                <div class="price-badge">от 1250 ₽/т</div>
+            </div>
+            <div class="material-card">
+                <i class="fas fa-circle"></i>
+                <h3>Гравий</h3>
+                <p>Речной, морской, декоративный. Для дренажа и отсыпки.</p>
+                <div class="price-badge">от 1100 ₽/т</div>
+            </div>
+            <div class="material-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Земля</h3>
+                <p>Плодородный грунт, чернозём, торфогрунт для газонов и теплиц.</p>
+                <div class="price-badge">от 900 ₽/м³</div>
+            </div>
+            <div class="material-card">
+                <i class="fas fa-tractor"></i>
+                <h3>Грунт</h3>
+                <p>Строительный грунт, суглинок, вывоз/завоз для планировки участков.</p>
+                <div class="price-badge">от 800 ₽/м³</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Зимние услуги + техника -->
+<!-- ЗИМНИЕ УСЛУГИ -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div class="winter-services">
@@ -482,7 +514,7 @@
     </div>
 </section>
 
-<!-- Преимущества -->
+<!-- ПРЕИМУЩЕСТВА -->
 <section class="section features">
     <div class="container">
         <h2 class="section-title">Почему выбирают нас</h2>
@@ -495,7 +527,7 @@
     </div>
 </section>
 
-<!-- Зона работы -->
+<!-- ЗОНА РАБОТЫ -->
 <section class="section">
     <div class="container">
         <div class="workzone">
@@ -509,14 +541,13 @@
     </div>
 </section>
 
-<!-- ФОРМА С РЕАЛЬНОЙ ОТПРАВКОЙ НА ПОЧТУ (исправлено) -->
+<!-- ФОРМА ЗАЯВКИ -->
 <section class="section form-section" id="orderForm">
     <div class="container">
         <h2 class="section-title">Оставить заявку</h2>
         <div class="section-sub">Рассчитаем стоимость песка, щебня или вывоза снега за 10 минут</div>
         <div class="callback-card">
             <form id="contactForm">
-                <!-- Поля формы -->
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Ваше имя *" required>
                 </div>
@@ -544,7 +575,7 @@
     </div>
 </section>
 
-<!-- Контакты -->
+<!-- КОНТАКТЫ -->
 <section class="section" style="padding-top: 0;">
     <div class="container">
         <div class="contact-info">
@@ -570,7 +601,6 @@
 <footer class="footer">
     <div class="container">
         <p>© 2025 ООО «СпецТранс» — доставка песка, щебня, земли, грунта, вывоз снега в Чехове и Домодедовском районе.</p>
-        <p>ИНН 5047098765 | ОГРН 1185047003452</p>
         <p><a href="#">Политика конфиденциальности</a> | <a href="#">Реквизиты</a></p>
     </div>
 </footer>
