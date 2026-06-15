@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>СпецТранс | Песок, щебень, вывоз снега | Чехов, Домодедовский р-н</title>
+    <title>СпецТранс | Доставка песка, щебня, вывоз снега | Чехов, Домодедово</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,9 +16,9 @@
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background-color: #f9fafb;
-            color: #1f2937;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
@@ -27,15 +29,16 @@
             padding: 0 24px;
         }
 
-        /* ШАПКА */
         .header {
-            background: #0b2b26;
+            background: #0f2c29;
             color: white;
-            padding: 15px 0;
+            padding: 18px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background: rgba(15, 44, 41, 0.95);
+            border-bottom: 1px solid rgba(255,215,0,0.15);
         }
 
         .header .container {
@@ -43,520 +46,713 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0c878 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .logo h1 i {
+            font-size: 1.5rem;
+            color: #e0c878;
+            background: none;
+        }
+
+        .emblem {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(245,215,66,0.15);
+            padding: 4px 10px;
+            border-radius: 60px;
+            margin-left: 8px;
+            border: 1px solid rgba(245,215,66,0.3);
+            transition: all 0.2s ease;
+        }
+
+        .emblem i {
+            font-size: 0.9rem;
+            color: #f5d742;
+        }
+
+        .logo:hover .emblem {
+            background: rgba(245,215,66,0.25);
+            transform: scale(1.02);
         }
 
         .logo p {
-            font-size: 0.7rem;
-            color: #cbd5e1;
+            font-size: 0.75rem;
+            color: #a3c4bc;
             margin-top: 4px;
         }
 
         .contacts-header a {
-            background: rgba(0,0,0,0.2);
-            padding: 8px 16px;
-            border-radius: 40px;
-            color: #fbbf24;
+            background: rgba(255,215,0,0.12);
+            padding: 8px 22px;
+            border-radius: 60px;
+            color: #f5d742;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            transition: 0.2s;
+            font-size: 1.1rem;
+            transition: 0.25s;
             display: inline-block;
-            white-space: nowrap;
+            border: 1px solid rgba(245,215,66,0.3);
         }
 
         .contacts-header a i {
-            margin-right: 6px;
-            color: white;
+            margin-right: 8px;
+            color: #f5d742;
         }
 
         .contacts-header a:hover {
-            background: #fbbf24;
-            color: #0b2b26;
-            transform: translateY(-2px);
+            background: #f5d742;
+            color: #0f2c29;
+            border-color: #f5d742;
+        }
+        .contacts-header a:hover i {
+            color: #0f2c29;
         }
 
-        /* ГЕРОЙ */
         .hero {
-            background: linear-gradient(135deg, #1e3c32 0%, #0a2a24 100%);
+            background: linear-gradient(125deg, #0f2c29 0%, #1a4a44 100%);
             color: white;
-            padding: 50px 0;
+            padding: 90px 0 100px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(245,215,66,0.08) 0%, transparent 60%);
+            pointer-events: none;
         }
 
         .hero h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 25px;
             font-weight: 800;
             line-height: 1.3;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.3px;
+        }
+
+        .hero h2 .underline {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h2 .underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #f5d742, #e0b81e, #f5d742);
+            border-radius: 3px;
+            transform: scaleX(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .hero:hover h2 .underline::after {
+            transform: scaleX(1);
+        }
+
+        .hero h2 .accent {
+            color: #f5d742;
+            text-shadow: 0 0 15px rgba(245,215,66,0.3);
         }
 
         .hero p {
-            font-size: 1rem;
-            max-width: 750px;
-            margin: 0 auto 25px;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
             opacity: 0.9;
-            padding: 0 10px;
         }
 
         .region-badge {
-            background: #fbbf24;
-            color: #1f2937;
+            background: rgba(245,215,66,0.2);
+            backdrop-filter: blur(4px);
+            color: #f5d742;
             display: inline-block;
-            padding: 6px 18px;
+            padding: 8px 24px;
             border-radius: 60px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(245,215,66,0.4);
         }
 
         .btn {
             display: inline-block;
-            background-color: #fbbf24;
-            color: #1f2937;
-            font-weight: bold;
-            padding: 12px 28px;
-            border-radius: 40px;
+            background: linear-gradient(105deg, #f5d742 0%, #e0b81e 100%);
+            color: #0f2c29;
+            font-weight: 700;
+            padding: 14px 38px;
+            border-radius: 60px;
             text-decoration: none;
-            font-size: 1rem;
-            transition: 0.25s;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+            font-size: 1.05rem;
+            transition: all 0.25s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .btn i {
             margin-right: 8px;
         }
 
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+            background: linear-gradient(105deg, #ffde4a 0%, #f0c81e 100%);
+        }
+
         .section {
-            padding: 50px 0;
+            padding: 70px 0;
         }
 
         .section-title {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 15px;
-            color: #0b2b26;
-            padding: 0 10px;
+            margin-bottom: 16px;
+            color: #0f2c29;
         }
 
         .section-sub {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 35px;
-            color: #4b5563;
-            font-size: 1rem;
-            padding: 0 15px;
+            max-width: 680px;
+            margin: 0 auto 50px;
+            color: #5b6e6b;
+            font-size: 1.05rem;
         }
 
-        /* СЕТКА КАРТОЧЕК - НА ТЕЛЕФОНЕ ПО 1 В РЯД */
         .materials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
         }
 
         .material-card {
             background: white;
-            border-radius: 24px;
-            padding: 25px 15px;
+            border-radius: 32px;
+            padding: 32px 20px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            transition: 0.3s ease;
-            border: 1px solid #eef2f0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #eaf0ed;
+        }
+
+        .material-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+            border-color: #e0c878;
         }
 
         .material-card i {
-            font-size: 3rem;
-            color: #cf9f2e;
-            margin-bottom: 15px;
+            font-size: 3.2rem;
+            color: #d4a91e;
+            margin-bottom: 20px;
         }
 
         .material-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #0b2b26;
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+            color: #0f2c29;
+            font-weight: 700;
         }
 
         .material-card p {
-            color: #4b5563;
+            color: #5b6e6b;
             font-size: 0.9rem;
-            padding: 0 5px;
         }
 
         .price-badge {
             display: inline-block;
-            background: #f3f4f6;
-            padding: 5px 14px;
+            background: #f1f5f9;
+            padding: 5px 16px;
             border-radius: 60px;
             font-weight: 600;
-            margin-top: 12px;
+            margin-top: 16px;
             font-size: 0.8rem;
-            color: #0b2b26;
+            color: #0f2c29;
         }
 
-        /* ЗИМНИЕ УСЛУГИ */
+        .rent-block {
+            background: linear-gradient(115deg, #fefbf0 0%, #fffaf0 100%);
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin-top: 30px;
+            border: 1px solid #f5e6c0;
+        }
+
+        .rent-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f2c29;
+            margin-bottom: 15px;
+        }
+
+        .rent-sub {
+            text-align: center;
+            font-size: 1rem;
+            color: #5b6e6b;
+            margin-bottom: 40px;
+        }
+
+        .rent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+            margin-bottom: 35px;
+        }
+
+        .rent-item {
+            background: white;
+            border-radius: 28px;
+            padding: 28px 18px;
+            text-align: center;
+            transition: 0.25s;
+            border: 1px solid #f0e6d0;
+        }
+
+        .rent-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .rent-item i {
+            font-size: 2.8rem;
+            color: #d4a91e;
+            margin-bottom: 15px;
+        }
+
+        .rent-item h4 {
+            font-size: 1.3rem;
+            color: #0f2c29;
+            margin-bottom: 10px;
+        }
+
+        .rent-footer {
+            text-align: center;
+            background: #0f2c29;
+            border-radius: 60px;
+            padding: 22px 25px;
+        }
+
+        .rent-footer p {
+            color: #f5d742;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .rent-footer .btn-small {
+            background: #f5d742;
+            color: #0f2c29;
+            padding: 10px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.2s;
+        }
+
+        .rent-footer .btn-small:hover {
+            background: #ffde4a;
+            transform: translateY(-2px);
+        }
+
         .winter-services {
-            background: linear-gradient(120deg, #eef2ff 0%, #e6f0fa 100%);
-            border-radius: 32px;
+            background: #f0f6f4;
+            border-radius: 48px;
             margin-top: 20px;
-            overflow: hidden;
+            border: 1px solid #dcebe6;
         }
 
         .service-wrapper {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 25px;
-            padding: 30px 20px;
-        }
-
-        .service-text {
-            flex: 2;
-            min-width: 240px;
+            gap: 32px;
+            padding: 45px 40px;
         }
 
         .service-text h3 {
-            font-size: 1.5rem;
-            color: #0b2b26;
-            margin-bottom: 12px;
-        }
-
-        .service-text p {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            color: #2c3e2f;
+            font-size: 1.8rem;
+            color: #0f2c29;
+            margin-bottom: 16px;
         }
 
         .service-badge {
             display: inline-block;
-            background: #0b2b26;
-            color: #fbbf24;
-            padding: 6px 16px;
+            background: #0f2c29;
+            color: #f5d742;
+            padding: 8px 22px;
             border-radius: 60px;
-            font-weight: bold;
-            font-size: 0.85rem;
+            font-weight: 600;
         }
 
         .service-images {
-            flex: 1.5;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            gap: 28px;
             flex-wrap: wrap;
         }
 
         .truck-card, .tractor-card {
             background: white;
-            border-radius: 28px;
-            padding: 15px 15px 12px;
+            border-radius: 32px;
+            padding: 20px;
             text-align: center;
-            width: 130px;
-            box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+            width: 160px;
         }
 
         .truck-card i, .tractor-card i {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: #2c5e4a;
         }
 
-        .truck-card p, .tractor-card p {
-            font-weight: bold;
-            margin-top: 8px;
-            font-size: 0.85rem;
-        }
-
-        .truck-card small, .tractor-card small {
-            font-size: 0.65rem;
-        }
-
-        /* ПРЕИМУЩЕСТВА */
         .features {
-            background: #eef2f0;
+            background: #f1f5f9;
         }
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 35px;
             text-align: center;
         }
         .feature-item i {
-            font-size: 2.2rem;
-            color: #0b2b26;
-            margin-bottom: 10px;
+            font-size: 2.4rem;
+            color: #d4a91e;
+            margin-bottom: 14px;
         }
         .feature-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-        .feature-item p {
-            font-size: 0.85rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0f2c29;
         }
 
-        /* ЗОНА РАБОТЫ */
-        .workzone {
-            background: white;
-            border-radius: 32px;
-            padding: 30px 20px;
+        .reviews-block {
+            background: #ffffff;
+            border-radius: 48px;
+            padding: 50px 40px;
+            margin-top: 30px;
+            border: 1px solid #eaf0ed;
             box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+        }
+
+        .reviews-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f2c29;
+            margin-bottom: 15px;
+        }
+
+        .reviews-sub {
+            text-align: center;
+            font-size: 1rem;
+            color: #5b6e6b;
+            margin-bottom: 40px;
+        }
+
+        .review-form {
+            background: #f8fafc;
+            border-radius: 32px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #eaf0ed;
+        }
+
+        .review-form h4 {
+            font-size: 1.3rem;
+            color: #0f2c29;
+            margin-bottom: 20px;
             text-align: center;
         }
-        .workzone h3 {
-            font-size: 1.4rem !important;
+
+        .rating-input {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            direction: rtl;
+        }
+
+        .rating-input input {
+            display: none;
+        }
+
+        .rating-input label {
+            font-size: 1.8rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .rating-input input:checked ~ label,
+        .rating-input label:hover,
+        .rating-input label:hover ~ label {
+            color: #f5b042;
+        }
+
+        .review-form input, .review-form textarea {
+            width: 100%;
+            padding: 12px 18px;
+            border: 1px solid #dce5e2;
+            border-radius: 60px;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+
+        .review-form textarea {
+            border-radius: 24px;
+            resize: vertical;
+        }
+
+        .review-form button {
+            background: #0f2c29;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 60px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .review-form button:hover {
+            background: #1e4a44;
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            border-radius: 28px;
+            padding: 22px;
+            border: 1px solid #eaf0ed;
+            position: relative;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .review-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0f2c29;
+        }
+
+        .review-stars {
+            color: #f5b042;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            color: #334155;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .review-date {
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+
+        .delete-review {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .delete-review:hover {
+            color: #ef4444;
+        }
+
+        .empty-reviews {
+            text-align: center;
+            padding: 40px;
+            color: #94a3b8;
+        }
+
+        .workzone {
+            background: white;
+            border-radius: 40px;
+            padding: 45px 35px;
+            text-align: center;
+            border: 1px solid #eaf0ed;
         }
         .zone-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 16px;
+            margin-top: 24px;
         }
         .zone-item {
-            background: #eef2f0;
-            padding: 8px 18px;
+            background: #f1f5f9;
+            padding: 10px 24px;
             border-radius: 60px;
             font-weight: 600;
-            color: #0b2b26;
+            color: #0f2c29;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
+            gap: 10px;
         }
 
-        /* ФОРМА */
         .form-section {
-            background: #f3f6f4;
+            background: #f8fafc;
         }
         .callback-card {
-            max-width: 700px;
+            max-width: 680px;
             margin: 0 auto;
             background: white;
-            padding: 30px 20px;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+            padding: 45px 40px;
+            border-radius: 40px;
+            border: 1px solid #eaf0ed;
         }
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
         .form-group input, 
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #d1d5db;
+            padding: 14px 20px;
+            border: 1px solid #dce5e2;
             border-radius: 60px;
             font-size: 0.95rem;
             font-family: inherit;
         }
         .form-group textarea {
-            border-radius: 24px;
-            resize: vertical;
+            border-radius: 28px;
+        }
+        .form-group input:focus, 
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4a91e;
+            box-shadow: 0 0 0 3px rgba(212,169,30,0.15);
         }
         .btn-submit {
-            background: #0b2b26;
+            background: #0f2c29;
             color: white;
-            border: none;
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 700;
             border-radius: 60px;
             cursor: pointer;
+            border: none;
+        }
+        .btn-submit:hover {
+            background: #1e4a44;
+            transform: scale(0.98);
         }
 
-        /* КОНТАКТЫ */
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
-            justify-content: space-between;
+            gap: 35px;
             margin-top: 30px;
         }
         .contact-details {
             flex: 1;
             background: white;
-            padding: 25px;
-            border-radius: 28px;
+            padding: 35px;
+            border-radius: 36px;
+            border: 1px solid #eaf0ed;
         }
         .contact-details h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #0f2c29;
         }
         .contact-details p {
-            margin: 12px 0;
+            margin: 18px 0;
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 1rem;
         }
         .contact-details i {
-            width: 28px;
-            color: #cf9f2e;
+            width: 32px;
+            color: #d4a91e;
         }
         .map-placeholder {
             flex: 1;
-            background: #e2e8f0;
-            border-radius: 28px;
-            min-height: 240px;
+            background: #e2eae7;
+            border-radius: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #d9e0e5;
-            color: #334155;
             flex-direction: column;
-            gap: 10px;
-            padding: 20px;
+            gap: 12px;
             text-align: center;
-        }
-        .map-placeholder i {
-            font-size: 2.5rem;
-        }
-        .map-placeholder p {
-            font-size: 0.85rem;
+            border: 1px solid #dcebe6;
         }
 
-        /* ПОДВАЛ */
         .footer {
-            background: #0b2b26;
-            color: #cbd5e6;
-            padding: 25px 0;
+            background: #0f2c29;
+            color: #bcd9d3;
+            padding: 35px 0;
             text-align: center;
-        }
-        .footer p {
-            font-size: 0.75rem;
-            margin: 5px 0;
         }
         .footer a {
-            color: #fbbf24;
-            text-decoration: none;
+            color: #f5d742;
         }
 
-        /* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-            
-            .hero {
-                padding: 40px 0;
-            }
-            
-            .section {
-                padding: 40px 0;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
-            }
-            
-            .material-card {
-                padding: 20px 12px;
-            }
-            
-            .material-card i {
-                font-size: 2.5rem;
-            }
-            
-            .material-card h3 {
-                font-size: 1.3rem;
-            }
-            
-            .service-wrapper {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px 16px;
-            }
-            
-            .service-images {
-                justify-content: center;
-            }
-            
-            .truck-card, .tractor-card {
-                width: 110px;
-                padding: 12px 10px;
-            }
-            
-            .truck-card i, .tractor-card i {
-                font-size: 2.8rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-            }
-            
-            .contacts-header a {
-                white-space: normal;
-                font-size: 0.9rem;
-                padding: 6px 12px;
-            }
-            
-            .logo h1 {
-                font-size: 1.3rem;
-            }
-            
-            .header .container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .zone-list {
-                gap: 10px;
-            }
-            
-            .zone-item {
-                font-size: 0.75rem;
-                padding: 6px 14px;
-            }
-            
-            .btn {
-                padding: 10px 24px;
-                font-size: 0.95rem;
-            }
-        }
-
-        /* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ТЕЛЕФОНОВ (до 400px) */
-        @media (max-width: 480px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .materials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-            
-            .section-title {
-                font-size: 1.4rem;
-            }
-            
-            .region-badge {
-                font-size: 0.75rem;
-                padding: 4px 14px;
-            }
-            
-            .truck-card, .tractor-card {
-                width: 100px;
-            }
+            .hero h2 { font-size: 1.9rem; }
+            .hero { padding: 60px 0 70px; }
+            .section-title { font-size: 1.7rem; }
+            .rent-block { padding: 32px 20px; }
+            .reviews-block { padding: 32px 20px; }
+            .service-wrapper { flex-direction: column; text-align: center; padding: 35px 25px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+            .contact-info { flex-direction: column; }
+            .callback-card { padding: 30px 20px; }
+            .header .container { flex-direction: column; text-align: center; }
+            .logo h1 { justify-content: center; }
+            .emblem { margin-left: 0; }
+            .review-header { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -565,7 +761,13 @@
 <header class="header">
     <div class="container">
         <div class="logo">
-            <h1><i class="fas fa-truck-dump"></i> СпецТранс</h1>
+            <h1>
+                <i class="fas fa-truck-dump"></i> СпецТранс
+                <span class="emblem">
+                    <i class="fas fa-hard-hat"></i>
+                    <i class="fas fa-tractor"></i>
+                </span>
+            </h1>
             <p>Доставка сыпучих материалов | Уборка и вывоз снега</p>
         </div>
         <div class="contacts-header">
@@ -577,10 +779,13 @@
 <section class="hero">
     <div class="container">
         <div class="region-badge">
-            <i class="fas fa-map-marker-alt"></i> г. Чехов, Чеховский р-н, Домодедовский р-н
+            <i class="fas fa-map-marker-alt"></i> г. Чехов · Чеховский р-н · Домодедовский р-н
         </div>
-        <h2>Песок, щебень, земля, грунт<br>и вывоз снега с вашей территории</h2>
-        <p>Собственный автопарк самосвалов и тракторов. Зимой — уборка снега, летом — стройматериалы. Работаем круглый год.</p>
+        <h2>
+            <span class="underline">Песок, щебень, земля, грунт</span><br>
+            и <span class="accent">вывоз снега</span> в вашем районе
+        </h2>
+        <p>Собственный автопарк самосвалов, тракторов и погрузчиков. Работаем с юрлицами и частниками. Круглый год.</p>
         <a href="#orderForm" class="btn"><i class="fas fa-calculator"></i> Оставить заявку</a>
     </div>
 </section>
@@ -589,37 +794,32 @@
 <section class="section">
     <div class="container">
         <h2 class="section-title">Сыпучие материалы</h2>
-        <div class="section-sub">Качество, проверенное временем</div>
+        <div class="section-sub">Качество, проверенное временем. Доставка от 1 тонны</div>
         <div class="materials-grid">
-            <div class="material-card">
-                <i class="fas fa-hourglass-half"></i>
-                <h3>Песок</h3>
-                <p>Карьерный, речной, сеяный. Для бетона, штукатурки, детских площадок.</p>
-                <div class="price-badge">от 750 ₽/т</div>
+            <div class="material-card"><i class="fas fa-hourglass-half"></i><h3>Песок</h3><p>Карьерный, речной, сеяный. Для бетона, штукатурки, детских площадок.</p><div class="price-badge">от 750 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-cube"></i><h3>Щебень</h3><p>Гранитный, известняковый. Фракции 5-20, 20-40, 40-70.</p><div class="price-badge">от 1250 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-circle"></i><h3>Гравий</h3><p>Речной, морской, декоративный. Для дренажа и отсыпки.</p><div class="price-badge">от 1100 ₽/т</div></div>
+            <div class="material-card"><i class="fas fa-leaf"></i><h3>Земля</h3><p>Плодородный грунт, чернозём, торфогрунт для газонов и теплиц.</p><div class="price-badge">от 900 ₽/м³</div></div>
+            <div class="material-card"><i class="fas fa-mountain"></i><h3>Грунт</h3><p>Строительный грунт, суглинок, вывоз/завоз для планировки.</p><div class="price-badge">от 800 ₽/м³</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- АРЕНДА ТЕХНИКИ -->
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="rent-block">
+            <div class="rent-title"><i class="fas fa-file-signature"></i> Аренда спецтехники для юридических лиц</div>
+            <div class="rent-sub">Работаем с организациями по договору. Наличный и безналичный расчёт. Вся техника исправна и готова к работе.</div>
+            <div class="rent-grid">
+                <div class="rent-item"><i class="fas fa-truck-moving"></i><h4>Самосвалы КАМАЗ</h4><p>Грузоподъёмность до 20 тонн. Перевозка песка, щебня, грунта, снега.</p></div>
+                <div class="rent-item"><i class="fas fa-tractor"></i><h4>Тракторы с отвалом</h4><p>Уборка снега, расчистка территорий, планировка грунта.</p></div>
+                <div class="rent-item"><i class="fas fa-cogs"></i><h4>Фронтальные погрузчики</h4><p>Погрузка сыпучих материалов, снега, грунта — любой сложности.</p></div>
+                <div class="rent-item"><i class="fas fa-snowplow"></i><h4>Снегоуборочная техника</h4><p>Щётки, шнекороторы — быстрая очистка парковок и подъездных путей.</p></div>
             </div>
-            <div class="material-card">
-                <i class="fas fa-cube"></i>
-                <h3>Щебень</h3>
-                <p>Гранитный, известняковый. Фракции 5-20, 20-40, 40-70.</p>
-                <div class="price-badge">от 1250 ₽/т</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-circle"></i>
-                <h3>Гравий</h3>
-                <p>Речной, морской, декоративный. Для дренажа и отсыпки.</p>
-                <div class="price-badge">от 1100 ₽/т</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-leaf"></i>
-                <h3>Земля</h3>
-                <p>Плодородный грунт, чернозём, торфогрунт для газонов и теплиц.</p>
-                <div class="price-badge">от 900 ₽/м³</div>
-            </div>
-            <div class="material-card">
-                <i class="fas fa-mountain"></i>
-                <h3>Грунт</h3>
-                <p>Строительный грунт, суглинок, вывоз/завоз для планировки участков.</p>
-                <div class="price-badge">от 800 ₽/м³</div>
+            <div class="rent-footer">
+                <p><i class="fas fa-check-circle"></i> Работаем с НДС и без НДС · Заключаем договоры · Предоставляем закрывающие документы</p>
+                <a href="#orderForm" class="btn-small"><i class="fas fa-paper-plane"></i> Оставить заявку на аренду</a>
             </div>
         </div>
     </div>
@@ -632,12 +832,12 @@
             <div class="service-wrapper">
                 <div class="service-text">
                     <h3><i class="fas fa-snowplow"></i> Зимние услуги — уборка и вывоз снега</h3>
-                    <p>Очистим участок, парковку, склад. КАМАЗы для вывоза, тракторы с щетками и отвалами. Работаем в Чехове, Домодедовском и Чеховском районах.</p>
+                    <p>Очистим участок, парковку, склад. КАМАЗы для вывоза, тракторы с щётками и отвалами. Работаем в Чехове, Домодедовском и Чеховском районах.</p>
                     <span class="service-badge"><i class="far fa-calendar-alt"></i> Сезон 2025 — принимаем заявки</span>
                 </div>
                 <div class="service-images">
                     <div class="truck-card"><i class="fas fa-truck-moving"></i><p>Самосвал КАМАЗ</p><small>Вывоз снега до 20т</small></div>
-                    <div class="tractor-card"><i class="fas fa-tractor"></i><p>Трактор с отвалом</p><small>Щетка / шнекоротор</small></div>
+                    <div class="tractor-card"><i class="fas fa-tractor"></i><p>Трактор с отвалом</p><small>Щётка / шнекоротор</small></div>
                 </div>
             </div>
         </div>
@@ -652,7 +852,37 @@
             <div class="feature-item"><i class="fas fa-stopwatch"></i><h4>Оперативно</h4><p>В день заказа</p></div>
             <div class="feature-item"><i class="fas fa-weight-hanging"></i><h4>Честный вес</h4><p>Контроль на весах</p></div>
             <div class="feature-item"><i class="fas fa-hand-holding-usd"></i><h4>Цены ниже рынка</h4><p>Без посредников</p></div>
-            <div class="feature-item"><i class="fas fa-truck"></i><h4>Свой автопарк</h4><p>КАМАЗы, тракторы</p></div>
+            <div class="feature-item"><i class="fas fa-truck"></i><h4>Свой автопарк</h4><p>КАМАЗы, тракторы, погрузчики</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="section">
+    <div class="container">
+        <div class="reviews-block">
+            <div class="reviews-title">
+                <i class="fas fa-star"></i> Отзывы наших клиентов
+            </div>
+            <div class="reviews-sub">
+                Ваше мнение важно для нас. Оставьте отзыв о нашей работе
+            </div>
+
+            <div class="review-form">
+                <h4>Оставить отзыв</h4>
+                <input type="text" id="reviewName" placeholder="Ваше имя *">
+                <div class="rating-input" id="ratingStars">
+                    <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                    <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                    <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                    <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                    <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+                </div>
+                <textarea id="reviewText" rows="3" placeholder="Ваш отзыв *"></textarea>
+                <button id="submitReviewBtn"><i class="fas fa-paper-plane"></i> Оставить отзыв</button>
+            </div>
+
+            <div id="reviewsList" class="reviews-list"></div>
         </div>
     </div>
 </section>
@@ -675,32 +905,25 @@
 <section class="section form-section" id="orderForm">
     <div class="container">
         <h2 class="section-title">Оставить заявку</h2>
-        <div class="section-sub">Рассчитаем стоимость песка, щебня или вывоза снега за 10 минут</div>
+        <div class="section-sub">Рассчитаем стоимость сыпучих материалов, аренды техники или вывоза снега за 10 минут</div>
         <div class="callback-card">
             <form id="contactForm">
+                <div class="form-group"><input type="text" id="name" placeholder="Ваше имя *" required></div>
+                <div class="form-group"><input type="tel" id="phone" placeholder="Номер телефона *" required></div>
                 <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Ваше имя *" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Номер телефона *" required>
-                </div>
-                <div class="form-group">
-                    <select id="serviceType" name="serviceType">
-                        <option value="Песок/щебень/земля">Сыпучие материалы (песок, щебень и пр.)</option>
+                    <select id="serviceType">
+                        <option value="Сыпучие материалы">Сыпучие материалы (песок, щебень и пр.)</option>
                         <option value="Уборка и вывоз снега">❄️ Уборка и вывоз снега</option>
-                        <option value="Консультация">Нужна консультация / другое</option>
+                        <option value="Аренда техники">🚛 Аренда техники для юрлиц</option>
+                        <option value="Консультация">Нужна консультация</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <input type="text" id="details" name="details" placeholder="Объём (м³/т) или примерная площадь для снега">
-                </div>
-                <div class="form-group">
-                    <textarea rows="3" id="message" name="message" placeholder="Укажите адрес (Чехов, Чеховский р-н, Домодедовский р-н) и пожелания"></textarea>
-                </div>
+                <div class="form-group"><input type="text" id="details" placeholder="Объём (м³/т) или какая техника нужна"></div>
+                <div class="form-group"><textarea rows="3" id="message" placeholder="Укажите адрес и пожелания"></textarea></div>
                 <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
-                <p style="font-size: 0.7rem; margin-top: 15px; text-align: center;">Заявка придёт на почту g15k114@mail.ru — менеджер свяжется с вами в течение 15 минут.</p>
+                <p style="font-size: 0.7rem; margin-top: 18px; text-align: center;">Заявка придёт на почту g15k114@mail.ru — менеджер свяжется в течение 15 минут.</p>
             </form>
-            <div id="formResult" style="margin-top: 15px; text-align: center; font-weight: 500; font-size: 0.85rem;"></div>
+            <div id="formResult" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
         </div>
     </div>
 </section>
@@ -715,9 +938,7 @@
                 <p><i class="fas fa-envelope"></i> <span>g15k114@mail.ru</span></p>
                 <p><i class="fas fa-clock"></i> <span>Ежедневно: 07:30 – 21:00</span></p>
                 <p><i class="fas fa-map-pin"></i> <span>г. Чехов, ул. Индустриальная, 5</span></p>
-                <div style="margin-top: 20px;">
-                    <a href="tel:+79067814855" class="btn" style="background: #0b2b26; color: #fbbf24; padding: 8px 20px; font-size: 0.9rem;"><i class="fas fa-phone"></i> Позвонить</a>
-                </div>
+                <div style="margin-top: 20px;"><a href="tel:+79067814855" class="btn" style="background: #0f2c29; color: #f5d742; padding: 10px 28px;"><i class="fas fa-phone"></i> Позвонить</a></div>
             </div>
             <div class="map-placeholder">
                 <i class="fas fa-snowplow"></i>
@@ -730,59 +951,163 @@
 
 <footer class="footer">
     <div class="container">
-        <p>© 2025 ООО «СпецТранс» — доставка песка, щебня, земли, грунта, вывоз снега в Чехове и Домодедовском районе.</p>
+        <p>© 2025 ООО «СпецТранс» — доставка сыпучих материалов, вывоз снега, аренда техники в Чехове и Домодедовском районе.</p>
         <p><a href="#">Политика конфиденциальности</a> | <a href="#">Реквизиты</a></p>
     </div>
 </footer>
 
 <script>
+    // ========== ФОРМА ЗАЯВКИ ==========
     (function() {
         const form = document.getElementById('contactForm');
         const resultDiv = document.getElementById('formResult');
-
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
-
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             if (!name || !phone) {
                 resultDiv.innerHTML = '<span style="color:#b91c1c;">❌ Заполните имя и номер телефона</span>';
                 return;
             }
-
             const formData = new FormData(form);
-            formData.append('_subject', 'Новая заявка с сайта СпецТранс');
+            formData.append('_subject', 'Заявка с сайта СпецТранс');
             formData.append('_captcha', 'true');
             formData.append('_template', 'table');
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
-
+            const btn = form.querySelector('button[type="submit"]');
+            const original = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
             try {
-                const response = await fetch('https://formsubmit.co/ajax/g15k114@mail.ru', {
-                    method: 'POST',
-                    body: formData
-                });
-                const data = await response.json();
-                if (data.success === 'true' || response.ok) {
-                    resultDiv.innerHTML = '<span style="color:#15803d;">✅ Спасибо, ' + name + '! Ваша заявка отправлена. Менеджер свяжется с вами по телефону ' + phone + ' в ближайшее время.</span>';
+                const response = await fetch('https://formsubmit.co/ajax/g15k114@mail.ru', { method: 'POST', body: formData });
+                if (response.ok) {
+                    resultDiv.innerHTML = '<span style="color:#15803d;">✅ Спасибо, заявка отправлена! Менеджер свяжется с вами.</span>';
                     form.reset();
-                } else {
-                    throw new Error('Ошибка при отправке');
-                }
+                } else throw new Error();
             } catch (error) {
-                resultDiv.innerHTML = '<span style="color:#b91c1c;">❌ Произошла ошибка при отправке. Пожалуйста, позвоните нам по телефону или попробуйте позже.</span>';
-                console.error(error);
+                resultDiv.innerHTML = '<span style="color:#b91c1c;">❌ Ошибка, позвоните нам по телефону.</span>';
             } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-                setTimeout(() => {
-                    if (resultDiv.innerHTML) resultDiv.innerHTML = '';
-                }, 6000);
+                btn.disabled = false;
+                btn.innerHTML = original;
+                setTimeout(() => resultDiv.innerHTML = '', 5000);
             }
         });
+    })();
+
+    // ========== БЛОК ОТЗЫВОВ ==========
+    (function() {
+        const STORAGE_KEY = 'spectrans_reviews';
+        
+        function loadReviews() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch(e) {
+                    return [];
+                }
+            }
+            return [
+                {
+                    id: Date.now() + 1,
+                    name: 'Алексей',
+                    rating: 5,
+                    text: 'Заказывал песок для стройки. Привезли вовремя, качество отличное. Рекомендую!',
+                    date: new Date().toLocaleDateString('ru-RU')
+                },
+                {
+                    id: Date.now() + 2,
+                    name: 'Сергей (ООО "СтройГрупп")',
+                    rating: 5,
+                    text: 'Заказывали щебень и аренду погрузчика. Всё чётко, по договору. Работаем уже не первый раз.',
+                    date: new Date().toLocaleDateString('ru-RU')
+                }
+            ];
+        }
+
+        function saveReviews(reviews) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(reviews));
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        function renderReviews() {
+            const reviews = loadReviews();
+            const container = document.getElementById('reviewsList');
+            
+            if (!reviews.length) {
+                container.innerHTML = '<div class="empty-reviews"><i class="fas fa-comment-dots"></i> Пока нет отзывов. Будьте первым!</div>';
+                return;
+            }
+
+            container.innerHTML = reviews.map(review => `
+                <div class="review-card" data-id="${review.id}">
+                    <div class="review-header">
+                        <div class="review-name"><i class="fas fa-user"></i> ${escapeHtml(review.name)}</div>
+                        <div class="review-stars">${'★'.repeat(review.rating)}${'☆'.repeat(5-review.rating)}</div>
+                    </div>
+                    <div class="review-text">${escapeHtml(review.text)}</div>
+                    <div class="review-date"><i class="fas fa-calendar-alt"></i> ${review.date}</div>
+                    <button class="delete-review" onclick="deleteReview(${review.id})" title="Удалить отзыв"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            `).join('');
+        }
+
+        window.deleteReview = function(id) {
+            if (confirm('Удалить этот отзыв?')) {
+                let reviews = loadReviews();
+                reviews = reviews.filter(r => r.id !== id);
+                saveReviews(reviews);
+                renderReviews();
+            }
+        };
+
+        function addReview(name, rating, text) {
+            if (!name.trim() || !text.trim()) {
+                alert('Пожалуйста, заполните имя и текст отзыва');
+                return false;
+            }
+            if (!rating || rating < 1 || rating > 5) {
+                alert('Пожалуйста, выберите оценку');
+                return false;
+            }
+            
+            const reviews = loadReviews();
+            const newReview = {
+                id: Date.now(),
+                name: name.trim(),
+                rating: parseInt(rating),
+                text: text.trim(),
+                date: new Date().toLocaleDateString('ru-RU')
+            };
+            reviews.unshift(newReview);
+            saveReviews(reviews);
+            renderReviews();
+            return true;
+        }
+
+        document.getElementById('submitReviewBtn').addEventListener('click', function() {
+            const name = document.getElementById('reviewName').value;
+            const rating = document.querySelector('input[name="rating"]:checked');
+            const text = document.getElementById('reviewText').value;
+            
+            if (addReview(name, rating ? rating.value : null, text)) {
+                document.getElementById('reviewName').value = '';
+                document.getElementById('reviewText').value = '';
+                const checkedRadio = document.querySelector('input[name="rating"]:checked');
+                if (checkedRadio) checkedRadio.checked = false;
+                alert('Спасибо за ваш отзыв!');
+            }
+        });
+
+        renderReviews();
     })();
 </script>
 </body>
